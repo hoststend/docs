@@ -1,0 +1,133 @@
+{
+	"attachmentsDir": "../../zImages", // Dossier contenant les fichiers attachés aux documents (images par exemple), relatif à la racine du projet ou absolu
+
+	"name": "Stend Docs", // Nom de la documentation, affiche dans le titre de la page
+	"sidebarName": "Stend – Docs", // Nom de la documentation, affiché dans la barre de navigation
+	"githubLink": "https://github.com/hoststend/docs", // Afficher tout en haut de la barre de navigation, laisser vide pour ne pas afficher
+	"twitterLink": "https://twitter.com/johan_stickman",
+	"contactLink": "https://johanstick.fr/#contact",
+
+	"pages": [ // Sidebar principale, en savoir plus --> https://fumadocs.vercel.app/docs/ui/page-conventions#pages
+		"Introduction.md",
+		"---API---",
+		"API/Introduction.md",
+		"API/Héberger l'API soi-même.md",
+		"API/Références de l'API",
+		"---Client WEB---",
+		"Client WEB/Introduction.md",
+		"Client WEB/Héberger soi-même.md",
+		"Client WEB/Développement.md",
+		"---Client Mobile---",
+		"Client Mobile/Introduction.md",
+		"Client Mobile/Fonctionnalités.md",
+		"Client Mobile/Protocole.md",
+		"Client Mobile/Releases.md",
+		"---Client Terminal---",
+		"Client Terminal/Introduction.md",
+		"Client Terminal/Commandes.md",
+		"Client Terminal/Options.md",
+		"Client Terminal/Fichiers d'instructions.md",
+		"---Serveur global---",
+		"Serveur global/Introduction.md",
+		"Serveur global/Fonctionnalités",
+		"Serveur global/Références de l'API",
+		"Serveur global/Politique de confidentialité.md"
+	],
+
+	"folders": { // Gestion des dossiers
+		"API": { // <-- nom du dossier (local)
+			"slug": "api-docs" // <-- chemin du dossier dans l'URL
+		},
+		"API/Références de l'API": {
+			"slug": "api-docs/endpoints",
+			"pages": [
+				"Introduction.md",
+				"Instance",
+				"Création de transferts",
+				"Lecture transferts"
+			]
+		},
+		"API/Références de l'API/Instance": {
+			"slug": "api-docs/endpoints/instance",
+			"pages": [
+				"Détails.md",
+				"Vérifier le mot de passe.md"
+			]
+		},
+		"API/Références de l'API/Création de transferts": {
+			"slug": "api-docs/endpoints/creating",
+			"pages": [
+				"Créer un transfert.md",
+				"Uploader un chunk.md",
+				"Fusionner plusieurs transferts.md",
+				"Supprimer un transfert.md"
+			]
+		},
+		"API/Références de l'API/Lecture transferts": {
+			"slug": "api-docs/endpoints/reading",
+			"pages": [
+				"Détails.md",
+				"Télécharger un fichier.md"
+			]
+		},
+		"Client WEB": {
+			"slug": "web-docs"
+		},
+		"Client Mobile": {
+			"slug": "mobile-docs"
+		},
+		"Client Terminal": {
+			"slug": "cli-docs"
+		},
+		"Serveur global": {
+			"slug": "global-server"
+		},
+		"Serveur global/Fonctionnalités": {
+			"slug": "global-server/features",
+			"pages": [
+				"Exposition des transferts.md"
+			]
+		},
+		"Serveur global/Références de l'API": {
+			"slug": "global-server/endpoints",
+			"pages": [
+				"Introduction.md",
+				"Détails.md",
+				"Authentification",
+				"Compte",
+				"Transferts",
+				"Tests"
+			]
+		},
+		"Serveur global/Références de l'API/Authentification": {
+			"slug": "global-server/endpoints/auth",
+			"pages": [
+				"Connexion avec Google.md",
+				"Échanger un code de connexion.md"
+			]
+		},
+		"Serveur global/Références de l'API/Compte": {
+			"slug": "global-server/endpoints/account",
+			"pages": [
+				"Détails d'un compte.md",
+				"Transferts d'un compte.md",
+				"Réinitialiser le token.md",
+				"Supprimer le compte.md"
+			]
+		},
+		"Serveur global/Références de l'API/Transferts": {
+			"slug": "global-server/endpoints/transferts",
+			"pages": [
+				"Exposer un transfert.md",
+				"Lister les transferts.md"
+			]
+		},
+		"Serveur global/Références de l'API/Tests": {
+			"slug": "global-server/endpoints/tests",
+			"pages": [
+				"Distance entre 2 coordonnées.md",
+				"Votre adresse IP.md"
+			]
+		}
+	}
+}
