@@ -102,7 +102,62 @@ name: selfhost
 </Steps>
 ```
 
-## Installation via Docker ^docker
+## Installation sur Dokploy
+
+Il est possible de configurer rapidement une instance sur [Dokploy](https://dokploy.com) en liant le Dockerfile disponible sur [GitHub](https://github.com/hoststend/stend-api/blob/main/Dockerfile).
+
+```component
+<Steps>
+	<Step>
+		### Créer un service
+
+		Depuis votre dashboard, dans un projet, créer un nouveau service "Application" et donnez lui le nom que vous souhaitez.
+	</Step>
+
+	<Step>
+		### Configurer le service
+
+		Définissez le provider sur Git :
+
+		- Repository URL: `https://github.com/hoststend/stend-api.git`
+		- Branch: `main`
+		- Build Path: `/`
+		- Watch Paths: *(empty)*
+
+		Définissez également "Build Type" sur "Dockerfile" et utiliser "Dockerfile" comme fichier source.
+	</Step>
+
+	<Step>
+		### Préserver les fichiers
+
+		Par défaut, les fichiers ainsi que la base de donnée sera effacé à chaque redémarrage. Pour corrigez cela, rendez-vous dans les réglages avancés de votre service et ajouter un nouveau volume :
+
+		- Mount Type: Volume Mount
+		- Volume Name: `stend_storage`
+		- Mount Path: `/usr/src/app/storage`
+	</Step>
+
+	<Step>
+		### Configurer les réglages
+
+		Des réglages par défauts sont appliqués pour faciliter un déploiement rapide, vous pouvez cependant utiliser les réglages d'environnement pour définir vos propres modifications. La liste des variables est [disponible ici](https://github.com/hoststend/stend-api/blob/main/.env.example).
+
+> [!warning] Avertissement
+> Il est recommandé de ne pas modifier le chemin utilisé pour le stockage des fichiers (`STORAGE_PATH`) sans revérifier la configuration des volumes.
+
+	</Step>
+
+	<Step>
+		### Finalisation
+
+		- Lors de l'ajout d'un domaine, le port à utiliser est `3000` si vous n'avez pas apporté de modifications à la variable d'environnement `PORT`.
+		- Pensez à faire un nouveau déploiement après avoir modifier les réglages liés aux volumes, à l'environnement ou aux domaines.
+		- Pour accéder à l'interface d'adminsitration, depuis General, cliquez sur "Open Terminal" et exécutez `npm run admin`
+	</Step>
+</Steps>
+```
+
+## Installation via Docker Compose ^docker
 
 Il est possible de configurer rapidement une instance via une image Docker publiée par [Make In Lab](https://it.makeinlab.fr) (non affiliée avec Stend). Il est recommandé d’écrire un unique `docker-compose.yml` contenant le [Client WEB](/web-docs/selfhost#docker) et l’API pour profiter de meilleures performances, cet exemple ne contiendra que les instructions pour l’API.
 

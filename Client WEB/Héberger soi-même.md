@@ -81,6 +81,55 @@ name: selfhost
 </Steps>
 ```
 
+## Installation sur Dokploy
+
+Il est possible de configurer rapidement une instance sur [Dokploy](https://dokploy.com) en liant le Dockerfile disponible sur [GitHub](https://github.com/hoststend/stend-api/blob/main/Dockerfile).
+
+```component
+<Steps>
+	<Step>
+		### Créer un service
+
+		Depuis votre dashboard, dans un projet, créer un nouveau service "Application" et donnez lui le nom que vous souhaitez.
+	</Step>
+
+	<Step>
+		### Configurer le service
+
+		Définissez le provider sur Git :
+
+		- Repository URL: `https://github.com/hoststend/stend-web.git`
+		- Branch: `main`
+		- Build Path: `/`
+		- Watch Paths: *(empty)*
+
+		Définissez également "Build Type" sur "Dockerfile" et utiliser "Dockerfile" comme fichier source.
+	</Step>
+
+	<Step>
+		### Configurer les réglages
+
+		Des réglages par défauts sont appliqués pour faciliter un déploiement rapide, vous pouvez cependant utiliser les réglages d'environnement pour définir vos propres modifications. La liste des variables est [disponible ici](https://github.com/hoststend/stend-web/blob/main/.env.example).
+
+		Cependant, il est nécessaire de commencer en ajoutant les variables d'environnement suivantes :
+
+		```env
+		FILE_MAX_SIZE="x GB"
+		API_BASE_URL="https://stend-api.example.com"
+		```
+
+	</Step>
+
+	<Step>
+		### Finalisation
+
+		- Lors de l'ajout d'un domaine, le port à utiliser est `80` si vous n'avez pas apporté de modifications à la variable d'environnement `PORT`.
+		- Pensez à faire un nouveau déploiement après avoir modifier les réglages liés à l'environnement ou aux domaines.
+		- Il est conseillé d'ajouter la variable d'environnement `FILE_MAX_SIZE` pour permettre d'afficher sur l'accueil la limite maximale d'envoi supporté par l'API.
+	</Step>
+</Steps>
+```
+
 ## Installation via Docker ^docker
 
 Il est possible de configurer rapidement le client via une image Docker publiée par [Make In Lab](https://it.makeinlab.fr) (non affiliée avec Stend). Il est recommandé d’écrire un unique `docker-compose.yml` contenant l’[API](/api-docs/selfhost#docker) et le client WEB pour profiter de meilleures performances, cet exemple ne contiendra que les instructions pour le client WEB.
