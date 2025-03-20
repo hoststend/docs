@@ -88,9 +88,9 @@ Il est possible de configurer rapidement une instance sur [Dokploy](https://dokp
 ```component
 <Steps>
 	<Step>
-		### Créer un service
+		### Créez un service
 
-		Depuis votre dashboard, dans un projet, créer un nouveau service "Application" et donnez lui le nom que vous souhaitez.
+		Depuis votre dashboard, dans un projet, créez un nouveau service "Application" et donnez lui le nom que vous souhaitez.
 	</Step>
 
 	<Step>
@@ -109,7 +109,7 @@ Il est possible de configurer rapidement une instance sur [Dokploy](https://dokp
 	<Step>
 		### Configurer les réglages
 
-		Des réglages par défauts sont appliqués pour faciliter un déploiement rapide, vous pouvez cependant utiliser les réglages d'environnement pour définir vos propres modifications. La liste des variables est [disponible ici](https://github.com/hoststend/stend-web/blob/main/.env.example).
+		Des réglages par défaut sont appliqués pour faciliter un déploiement rapide, vous pouvez cependant utiliser les réglages d'environnement pour définir vos propres modifications. La liste des variables est [disponible ici](https://github.com/hoststend/stend-web/blob/main/.env.example).
 
 		Cependant, il est nécessaire de commencer en ajoutant les variables d'environnement suivantes :
 
@@ -124,8 +124,8 @@ Il est possible de configurer rapidement une instance sur [Dokploy](https://dokp
 		### Finalisation
 
 		- Lors de l'ajout d'un domaine, le port à utiliser est `80` si vous n'avez pas apporté de modifications à la variable d'environnement `PORT`.
-		- Pensez à faire un nouveau déploiement après avoir modifier les réglages liés à l'environnement ou aux domaines.
-		- Il est conseillé d'ajouter la variable d'environnement `FILE_MAX_SIZE` pour permettre d'afficher sur l'accueil la limite maximale d'envoi supporté par l'API.
+		- Pensez à faire un nouveau déploiement après avoir modifié les réglages liés à l'environnement ou aux domaines.
+		- Il est conseillé d'ajouter la variable d'environnement `FILE_MAX_SIZE` pour permettre d'afficher sur l'accueil la limite maximale d'envoi supportée par l'API.
 	</Step>
 </Steps>
 ```
@@ -137,7 +137,7 @@ Il est possible de configurer rapidement le client via une image Docker publiée
 ```component
 <Steps>
 	<Step>
-		### Créer un dossier
+		### Créez un dossier
 
 		```bash
 		mkdir stend-web
@@ -148,7 +148,7 @@ Il est possible de configurer rapidement le client via une image Docker publiée
 	<Step>
 		### Écrire le docker-compose.yml
 
-		Vous aurez maintenant besoin de créer un fichier `docker-compose.yml` dans le dossier actuel. Vous pouvez copier cet exemple de configuration en modifiant les variables d'environnement que vous pensez être importantes.
+		Vous aurez maintenant besoin de créez un fichier `docker-compose.yml` dans le dossier actuel. Vous pouvez copier cet exemple de configuration en modifiant les variables d'environnement que vous pensez être importantes.
 
 		```dockercompose
 		version: '3'

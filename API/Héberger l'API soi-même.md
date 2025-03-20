@@ -109,9 +109,9 @@ Il est possible de configurer rapidement une instance sur [Dokploy](https://dokp
 ```component
 <Steps>
 	<Step>
-		### Créer un service
+		### Créez un service
 
-		Depuis votre dashboard, dans un projet, créer un nouveau service "Application" et donnez lui le nom que vous souhaitez.
+		Depuis votre dashboard, dans un projet, créez un nouveau service "Application" et donnez lui le nom que vous souhaitez.
 	</Step>
 
 	<Step>
@@ -130,7 +130,7 @@ Il est possible de configurer rapidement une instance sur [Dokploy](https://dokp
 	<Step>
 		### Préserver les fichiers
 
-		Par défaut, les fichiers ainsi que la base de donnée sera effacé à chaque redémarrage. Pour corrigez cela, rendez-vous dans les réglages avancés de votre service et ajouter un nouveau volume :
+		Par défaut, les fichiers ainsi que la base de données seront effacés à chaque redémarrage. Pour corriger cela, rendez-vous dans les réglages avancés de votre service et ajoutez un nouveau volume :
 
 		- Mount Type: Volume Mount
 		- Volume Name: `stend_storage`
@@ -140,7 +140,7 @@ Il est possible de configurer rapidement une instance sur [Dokploy](https://dokp
 	<Step>
 		### Configurer les réglages
 
-		Des réglages par défauts sont appliqués pour faciliter un déploiement rapide, vous pouvez cependant utiliser les réglages d'environnement pour définir vos propres modifications. La liste des variables est [disponible ici](https://github.com/hoststend/stend-api/blob/main/.env.example).
+		Des réglages par défaut sont appliqués pour faciliter un déploiement rapide, vous pouvez cependant utiliser les réglages d'environnement pour définir vos propres modifications. La liste des variables est [disponible ici](https://github.com/hoststend/stend-api/blob/main/.env.example).
 
 > [!warning] Avertissement
 > Il est recommandé de ne pas modifier le chemin utilisé pour le stockage des fichiers (`STORAGE_PATH`) sans revérifier la configuration des volumes.
@@ -164,7 +164,7 @@ Il est possible de configurer rapidement une instance via une image Docker publi
 ```component
 <Steps>
 	<Step>
-		### Créer un dossier
+		### Créez un dossier
 
 		```bash
 		mkdir stend-api
@@ -175,7 +175,7 @@ Il est possible de configurer rapidement une instance via une image Docker publi
 	<Step>
 		### Écrire le docker-compose.yml
 
-		Vous aurez maintenant besoin de créer un fichier `docker-compose.yml` dans le dossier actuel. Vous pouvez copier cet exemple de configuration en modifiant les variables d'environnement que vous pensez être importantes.
+		Vous aurez maintenant besoin de créez un fichier `docker-compose.yml` dans le dossier actuel. Vous pouvez copier cet exemple de configuration en modifiant les variables d'environnement que vous pensez être importantes.
 
 		```dockercompose
 		version: '3'
