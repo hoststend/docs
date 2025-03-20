@@ -151,8 +151,8 @@ Il est possible de configurer rapidement une instance sur [Dokploy](https://dokp
 		### Finalisation
 
 		- Lors de l'ajout d'un domaine, le port à utiliser est `3000` si vous n'avez pas apporté de modifications à la variable d'environnement `PORT`.
-		- Pensez à faire un nouveau déploiement après avoir modifier les réglages liés aux volumes, à l'environnement ou aux domaines.
-		- Pour accéder à l'interface d'adminsitration, depuis General, cliquez sur "Open Terminal" et exécutez `npm run admin`
+		- Pensez à faire un nouveau déploiement après avoir modifié les réglages liés aux volumes, à l'environnement ou aux domaines.
+		- Pour accéder à l'interface d'administration, depuis General, cliquez sur "Open Terminal" et exécutez `npm run admin`
 	</Step>
 </Steps>
 ```
