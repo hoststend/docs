@@ -116,6 +116,7 @@ Il est possible de configurer rapidement une instance sur [Dokploy](https://dokp
 		```env
 		FILE_MAX_SIZE="x GB"
 		API_BASE_URL="https://stend-api.example.com"
+		SHOW_HTML_EXTENSION="false"
 		```
 
 	</Step>
